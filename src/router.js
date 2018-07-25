@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './components/Home.vue'
 import Media from './components/Media.vue'
-import Player from '@/components/Players/players'
-import CreatePlayer from '@/components/Players/createPlayer'
-import SignUp from '@/components/Users/signUp'
-import SignIn from '@/components/Users/signIn'
+import Player from '@/components/PLAYERS/players'
+import CreatePlayer from '@/components/PLAYERS/createPlayer'
+import SignUp from '@/components/USERS/SIGNUP'
+import SignIn from '@/components/USERS/SIGNIN'
 
 
 Vue.use(Router)
