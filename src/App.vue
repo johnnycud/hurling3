@@ -39,9 +39,9 @@ export default {
       menuItems:[
         {icon: 'supervisor_account',title:'View Players', link: '/players'},
         {icon: 'perm_media',title:'Media', link: '/media'},
-        {icon: 'person',title:'View Profiles', link: '/createplayer'},
-        {icon: 'face',title:'Sign-Up', link: '/signup'},
-        {icon: 'lock_open',title:'Sign-In', link: '/signin'}
+        {icon: 'person',title:'Create Profiles', link: '/createPlayer'},
+        {icon: 'face',title:'Sign-Up', link: '/signUp'},
+        {icon: 'lock_open',title:'Sign-In', link: '/signIn'}
       ]
     }
   }
