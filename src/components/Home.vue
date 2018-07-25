@@ -2,12 +2,12 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
-        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
+        <img src="@/assets/hurling.jpg" alt="Vuetify.js" class="mb-5">
         <blockquote>
-          &#8220;First, solve the problem. Then, write the code.&#8221;
+          &#8220;Welcome to the Huring Profile Sitel.&#8221;
           <footer>
             <small>
-              <em>&mdash;John Johnson</em>
+              <em>&mdash;John Cuddihy</em>
             </small>
           </footer>
         </blockquote>

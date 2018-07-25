@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
-
+import '@mdi/font/css/materialdesignicons.css'
 Vue.config.productionTip = false
 
 /* eslint-disable */
