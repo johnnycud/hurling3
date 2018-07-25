@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './components/Home.vue'
-import About from './components/About.vue'
+import Media from './components/Media.vue'
+import Player from '@/components/Players/Players'
+import CreatePlayer from '@/components/Players/createplayer'
+import SignUp from '@/components/Users/signUp'
+import SignIn from '@/components/Users/signIn'
+
 
 Vue.use(Router)
-    /* eslint-disable */
+
+/* eslint-disable */
+
 export default new Router({
     routes: [{
             path: '/',
@@ -12,9 +19,30 @@ export default new Router({
             component: Home
         },
         {
-            path: '/about',
-            name: 'about',
-            component: About
+            path: '/players',
+            name: 'player',
+            component: Player
+        },
+        {
+            path: '/signup',
+            name: 'signup',
+            component: SignUp
+        },
+        {
+            path: '/createPlayer',
+            name: 'createplayer',
+            component: CreatePlayer
+        },
+        {
+            path: '/signin',
+            name: 'signin',
+            component: SignIn
+        },
+        {
+            path: '/media',
+            name: 'media',
+            component: Media
         }
-    ]
+    ],
+    mode: 'history'
 })

@@ -37,11 +37,11 @@ export default {
     return {
       sideNav:false,
       menuItems:[
-        {icon: 'supervisor_account',title:'View Players'},
-        {icon: 'perm_media',title:'Media'},
-        {icon: 'person',title:'View Profiles'},
-        {icon: 'face',title:'Sign-Up'},
-        {icon: 'lock_open',title:'Sign-In'}
+        {icon: 'supervisor_account',title:'View Players', link: '/players'},
+        {icon: 'perm_media',title:'Media', link: '/media'},
+        {icon: 'person',title:'View Profiles', link: '/createplayer'},
+        {icon: 'face',title:'Sign-Up', link: '/signup'},
+        {icon: 'lock_open',title:'Sign-In', link: '/signin'}
       ]
     }
   }
