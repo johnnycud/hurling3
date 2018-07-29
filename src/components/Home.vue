@@ -1,35 +1,59 @@
 <template>
-  <v-container fluid>
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <img src="@/assets/hurling.jpg" alt="Vuetify.js" class="mb-5">
-        <blockquote>
-          &#8220;Welcome to the Huring Profile Site.&#8221;
-          <footer>
-            <small>
-              <em>&mdash;John Cuddihy</em>
-            </small>
-          </footer>
-        </blockquote>
+  <v-container>
+      <v-layout row wrap class="mb-2">  
+        <v-flex xs12 sm6 class="text-xs-centre text-sm-right">
+          <v-btn large router to="/players" class="success">Explore Players</v-btn>
+        </v-flex>
+        <v-flex xs12 sm6 class="text-xs-centre text-sm-left">
+          <v-btn large router to="/media" class="success">Search Media</v-btn>
+        </v-flex>
       </v-layout>
-    </v-slide-y-transition>
+      <v-layout row wrap class="mt-2">
+        <v-flex xs12>
+          <v-carousel>
+            <v-carousel-item
+              v-for="(player) in players"
+              :src="player.imageUrl"
+              :key="player.id">
+              <div class="title">
+                {{player.title}}
+              </div>
+            </v-carousel-item>
+          </v-carousel>
+        </v-flex>
+      </v-layout>
+      <v-layout row wrap class="mt-2">  
+        <v-flex xs12  class="text-xs-center ">
+          <p>Join our awesome Hurling App</p>
+        </v-flex>
+      </v-layout>
   </v-container>
 </template>
 
+<script>
+/* eslint-disable */
+import vuetify from 'vue-cli-plugin-vuetify'
+  export default{
+    data(){
+      return{
+        players: [
+          {imageUrl: 'https://cdn-04.independent.ie/sport/article31172892.ece/b282e/AUTOCROP/w620/2015-04-26_spo_8620492_I1.JPG', id:'afaj12', title:'Eddie Keher'},
+          {imageUrl: 'http://kilkennygaa.ie/adm_pictures/54fa939afed8224.44755381.jpg', id:'afaj13', title:'Ollie Walsh'},
+          {imageUrl: 'https://pbs.twimg.com/media/ByTnLhQIQAAoIyU.jpg', id:'afaj14', title:'Babs Keating'},
+          {imageUrl: 'https://www.thesun.ie/wp-content/uploads/sites/3/2017/11/145039-e1509832889880.jpg', id:'afaj15', title:'Tony Doran'}
+        ]
+      }
+    }
+  }
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .title{
+    position:absolute;
+    bottom: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 2em;
+    padding:20px 
+  }
 </style>

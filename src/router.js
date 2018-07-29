@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './components/Home.vue'
-import Media from './components/Media.vue'
-import Player from '@/components/PLAYERS/players'
-import CreatePlayer from '@/components/PLAYERS/createPlayer'
-import SignUp from '@/components/USERS/SIGNUP'
-import SignIn from '@/components/USERS/SIGNIN'
+import Home from '@/components/Home'
+import Media from '@/components/Media'
+import Players from '@/components/Players/Players'
+import CreatePlayer from '@/components/Players/CreatePlayer'
+import SignIn from '@/components/User/SignIn'
+import SignUp from '@/components/User/SignUp'
 
 
 Vue.use(Router)
@@ -15,32 +15,33 @@ Vue.use(Router)
 export default new Router({
     routes: [{
             path: '/',
-            name: 'home',
+            name: 'Home',
             component: Home
         },
         {
             path: '/players',
-            name: 'player',
-            component: Player
+            name: 'Players',
+            component: Players
         },
         {
-            path: '/signup',
-            name: 'signup',
-            component: SignUp
-        },
-        {
-            path: '/createPlayer',
-            name: 'createplayer',
+            path: '/player/new',
+            name: 'CreatePlayer',
             component: CreatePlayer
         },
         {
+            path: '/signup',
+            name: 'SignUp',
+            component: SignUp
+        },
+
+        {
             path: '/signin',
-            name: 'signin',
+            name: 'SignIn',
             component: SignIn
         },
         {
             path: '/media',
-            name: 'media',
+            name: 'Media',
             component: Media
         }
     ],

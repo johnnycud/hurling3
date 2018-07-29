@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { VCarousel, VCarouselItem } from 'vuetify'
 import {
     Vuetify,
     VApp,
@@ -9,8 +10,10 @@ import {
     VIcon,
     VGrid,
     VToolbar,
+
     transitions
-} from 'vuetify'
+}
+from 'vuetify'
 import 'vuetify/src/stylus/app.styl'
 
 
@@ -24,6 +27,7 @@ Vue.use(Vuetify, {
         VIcon,
         VGrid,
         VToolbar,
+        VCarouselItem,
         transitions
     },
     theme: {

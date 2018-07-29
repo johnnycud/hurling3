@@ -1,5 +1,5 @@
 <template>
   <div>
-    The Create Player Page
+    <h1>The Create Player Page</h1>
   </div>
 </template>

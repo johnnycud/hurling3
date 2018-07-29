@@ -2,18 +2,11 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
-        <img src="@/assets/hurling.jpg" alt="Vuetify.js" class="mb-5">
-        <blockquote>
-          &#8220;This is a list of Hurling players from the past;
-          <footer>
-            <small>
-              <em>&mdash;John Cuddihy</em>
-            </small>
-          </footer>
-        </blockquote>
+          <h2>This is a list of Hurling players from the past;</h2>
       </v-layout>
     </v-slide-y-transition>
   </v-container>
+ 
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
