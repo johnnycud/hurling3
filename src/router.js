@@ -6,7 +6,7 @@ import Players from '@/components/Players/Players'
 import CreatePlayer from '@/components/Players/CreatePlayer'
 import SignIn from '@/components/User/SignIn'
 import SignUp from '@/components/User/SignUp'
-
+import Player from '@/components/Players/Player'
 
 Vue.use(Router)
 
@@ -24,10 +24,16 @@ export default new Router({
             component: Players
         },
         {
+            path: '/players/:id',
+            name: 'Player',
+            component: Player
+        },
+        {
             path: '/player/new',
             name: 'CreatePlayer',
             component: CreatePlayer
         },
+
         {
             path: '/signup',
             name: 'SignUp',

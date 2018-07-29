@@ -10,11 +10,12 @@
       </v-layout>
       <v-layout row wrap class="mt-2">
         <v-flex xs12>
-          <v-carousel>
+          <v-carousel style="cursor: pointer;">
             <v-carousel-item
               v-for="(player) in players"
               :src="player.imageUrl"
-              :key="player.id">
+              :key="player.id"
+              @click="onLoadPlayer(player.id)">
               <div class="title">
                 {{player.title}}
               </div>
@@ -43,7 +44,13 @@ import vuetify from 'vue-cli-plugin-vuetify'
           {imageUrl: 'https://www.thesun.ie/wp-content/uploads/sites/3/2017/11/145039-e1509832889880.jpg', id:'afaj15', title:'Tony Doran'}
         ]
       }
-    }
+      },
+      methods: {
+        onLoadPlayer(id){
+          this.$router.push('/players/' + id)
+        }
+      }
+    
   }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
