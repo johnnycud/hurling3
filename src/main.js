@@ -4,11 +4,12 @@ import './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
 import './registerServiceWorker'
+import '@mdi/font/css/materialdesignicons.css'
+import vuetify from 'vue-cli-plugin-vuetify'
 
-
-//import '@mdi/font/css/materialdesignicons.css'
-
+Vue.use(vuetify)
 Vue.config.productionTip = false
 
 /* eslint-disable */

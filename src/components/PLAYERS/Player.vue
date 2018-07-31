@@ -4,22 +4,34 @@
             <v-flex xs12>
                 <v-card>
                     <v-card-title>
-                      <h6 class="primary--text">My Player</h6>
+                      <h3 class="primary--text">{{ player.title }}</h3>
                     </v-card-title>
                     <v-card-media
-                      src="https://cdn-04.independent.ie/sport/article31172892.ece/b282e/AUTOCROP/w620/2015-04-26_spo_8620492_I1.JPG"
+                      :src="player.imageUrl"
                       height="400px">
                     </v-card-media>
                     <v-card-text>
-                        <div class="info--text">Club: BennetBridge County: Kilkenny</div>
-                        <div>Rest of info from database</div>
+                        <div class="info--text">{{ player.date }}</div>
+                        <div>Rest of info from database Club: BennetBridge County: Kilkenny</div>
                     </v-card-text>
-                    <v-card-action>
+                    <v-card-actions>
                         <v-spacer></v-spacer>
                         <v-btn class="primary">Register</v-btn>
-                    </v-card-action>
+                    </v-card-actions>
                 </v-card>
             </v-flex>
         </v-layout>
     </v-container>
 </template>
+
+<script>
+/* eslint-disable */
+export default{
+    props: ['id'],
+    computed:{
+        player(){
+            return this.$store.getters.loadedPlayer(this.id)
+        }
+    }
+}
+</script>

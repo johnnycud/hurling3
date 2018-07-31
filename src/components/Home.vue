@@ -24,7 +24,7 @@
         </v-flex>
       </v-layout>
       <v-layout row wrap class="mt-2">  
-        <v-flex xs12  class="text-xs-center ">
+        <v-flex xs12 class="text-xs-center ">
           <p>Join our awesome Hurling App</p>
         </v-flex>
       </v-layout>
@@ -34,24 +34,19 @@
 <script>
 /* eslint-disable */
 import vuetify from 'vue-cli-plugin-vuetify'
-  export default{
-    data(){
-      return{
-        players: [
-          {imageUrl: 'https://cdn-04.independent.ie/sport/article31172892.ece/b282e/AUTOCROP/w620/2015-04-26_spo_8620492_I1.JPG', id:'afaj12', title:'Eddie Keher'},
-          {imageUrl: 'http://kilkennygaa.ie/adm_pictures/54fa939afed8224.44755381.jpg', id:'afaj13', title:'Ollie Walsh'},
-          {imageUrl: 'https://pbs.twimg.com/media/ByTnLhQIQAAoIyU.jpg', id:'afaj14', title:'Babs Keating'},
-          {imageUrl: 'https://www.thesun.ie/wp-content/uploads/sites/3/2017/11/145039-e1509832889880.jpg', id:'afaj15', title:'Tony Doran'}
-        ]
+export default{
+  computed : {
+    players() {
+      return this.$store.getters.featuredPlayers
+    }
+  },
+    methods: {
+      onLoadPlayer (id) {
+        this.$router.push('/players/' + id)
       }
-      },
-      methods: {
-        onLoadPlayer(id){
-          this.$router.push('/players/' + id)
-        }
-      }
+    }
     
-  }
+}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

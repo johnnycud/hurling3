@@ -24,15 +24,17 @@ export default new Router({
             component: Players
         },
         {
-            path: '/players/:id',
-            name: 'Player',
-            component: Player
-        },
-        {
             path: '/player/new',
             name: 'CreatePlayer',
             component: CreatePlayer
         },
+        {
+            path: '/players/:id',
+            name: 'Player',
+            props: true,
+            component: Player
+        },
+
 
         {
             path: '/signup',
