@@ -35,8 +35,30 @@ export default new Vuex.Store({
             registeredPlayers: ['afaj1']
         }
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+        createMeetup(state, payload) {
+            state.loadedPlayers.push(payload)
+        }
+    },
+    actions: {
+        createMeetup({ commit }, payload) {
+            const player = {
+                    firstName: payload.firstName,
+                    surName: payload.surName,
+                    dob: payload.dob,
+                    dod: payload.dod,
+                    club: payload.club,
+                    county: payload.county,
+                    imageUrl: payload.imageUrl,
+                    fieldPosition: payload.fieldPosition,
+                    description: payload.description,
+                    date: payload.date,
+                    id: 'kfdlsfjslakl12'
+                }
+                // Reach out to firebase and store it
+            commit('createMeetup', player)
+        }
+    },
     getters: {
         loadedPlayers(state) {
             return state.loadedPlayers.sort((playerA, playerB) => {

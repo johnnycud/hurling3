@@ -1,6 +1,10 @@
 import Vue from 'vue'
+
+
+
+
 import {
-    Vuetify,
+    vuetify,
     VApp,
     VNavigationDrawer,
     VFooter,
@@ -12,13 +16,14 @@ import {
     VCarousel,
     transitions,
 
+
     VCard
 }
 from 'vuetify'
 import 'vuetify/src/stylus/app.styl'
 
 
-Vue.use(Vuetify, {
+Vue.use(vuetify, {
     components: {
         VApp,
         VNavigationDrawer,
@@ -33,6 +38,7 @@ Vue.use(Vuetify, {
 
         transitions
     },
+
     theme: {
         primary: '#ee44aa',
         secondary: '#424242',

@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 
 import './registerServiceWorker'
-import '@mdi/font/css/materialdesignicons.css'
+//import '@mdi/font/css/materialdesignicons.css'
 import vuetify from 'vue-cli-plugin-vuetify'
 
 Vue.use(vuetify)
